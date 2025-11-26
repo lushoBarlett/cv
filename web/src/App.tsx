@@ -1,4 +1,4 @@
-import './style.css';
+// CSS is imported in entry-client.tsx for client-side, not here for SSR
 
 export default function App() {
   return (
