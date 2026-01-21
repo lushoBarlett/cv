@@ -1,13 +1,12 @@
 .PHONY: all clean
 
-all: english/cv.pdf spanish/cv.pdf
+DIRS := doctorate english spanish
+TARGETS := $(addsuffix /cv.pdf,$(DIRS))
 
-english/cv.pdf: english/cv.tex
-	cd english && pdflatex cv.tex
+all: $(TARGETS)
 
-spanish/cv.pdf: spanish/cv.tex
-	cd spanish && pdflatex cv.tex
+%/cv.pdf: %/*.tex
+	cd $* && pdflatex cv.tex
 
 clean:
-	cd english && rm -f *.aux *.log *.out *.pdf *.bcf *.run.xml
-	cd spanish && rm -f *.aux *.log *.out *.pdf *.bcf *.run.xml
+	for dir in $(DIRS); do cd $$dir && rm -f *.aux *.log *.out *.pdf *.bcf *.run.xml && cd ..; done
