@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+% Geometry settings for standard French letter margins
+\geometry{
+  a4paper,
+  left=25mm,
+  right=25mm,
+  top=20mm,
+  bottom=20mm,
+}
+
+% Sender Information
+\name{Luciano Barletta}
+\signature{Luciano Barletta}
+\address{Luciano Barletta \\ Oroño 5845 B \\ Rosario, Santa Fe, Argentina \\ \faEnvelope\ \href{mailto:lushobarlett@gmail.com}{lushobarlett@gmail.com} \\ \faPhone\ +54 341 595-9169 }
+
+% Date
+\date{\today}
+
+\begin{document}
+
+% Recipient Information - Updated for Inria Nancy / MOCQUA
+\begin{letter}{
+		\textbf{Inria Nancy -- Grand Est} \\
+		Équipe-projet MOCQUA \\
+		615 rue du Jardin Botanique \\
+		54600 Villers-lès-Nancy, France
+	}
+
+	\opening{Dear Members of the Selection Committee,}
+
+	% Object Line - Specific to the offer
+	\noindent\textbf{Subject:} Application for PhD Position -- Resource-Aware Quantum Lambda Calculi with Coherent Control (PEPR EPiQ)
+	\vspace{0.5cm}
+
+	% --- PART 1: LE VOUS (The Context) ---
+	% Focus: Specific research interest
+	I am submitting my candidacy for the position referenced above. I am interested in this research line because it targets formal certification of resource consumption in quantum programs. Using linear logic and realizability techniques to characterize classes like BQP is a concrete problem I want to work on.
+
+	In my Master's thesis, I worked independently to design and implement a functional quantum programming language. I focused on the "classical control / quantum data" paradigm, defined semantics using superoperators and density matrices to model measurements and loops, implemented an interpreter in Haskell, and adapted a Hoare Logic for verification. I maintained excellent academic standing throughout my studies, which provided a solid base in complexity theory and formal methods.
+
+	% --- PART 3: LE NOUS (The Fit) ---
+	% Focus: Technical Match
+	My experience with functional programming and quantum semantics is directly applicable to this project. I am prepared to investigate the challenges posed by coherent control and to contribute to the development of sound type systems for quantum complexity.
+
+	% --- CLOSING ---
+	\vspace{0.5cm}
+	I have enclosed my CV for your review.
+	% Mandatory French formal closing
+	\closing{Je reste à votre disposition pour un entretien et vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.}
+
+\end{letter}
+\end{document}
